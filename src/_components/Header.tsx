@@ -7,8 +7,8 @@ function Header() {
       <Link href={"/"} className="text-lg">
         Home
       </Link>
-      <Link href={"/about"} className="text-lg">
-        About
+      <Link href={"/product"} className="text-lg">
+        Product
       </Link>
       <Link href={"/contact-us"} className="text-lg">
         Contact Us

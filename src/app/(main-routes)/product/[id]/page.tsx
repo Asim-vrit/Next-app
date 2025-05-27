@@ -1,4 +1,6 @@
 import React from "react";
+import ButtonForProduct from "./_component/ButtonForProduct";
+import Test from "./_component/Test";
 
 type Product = {
   id: number;
@@ -13,11 +15,15 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
   const param = await params;
   const res = await fetch("https://fakestoreapi.com/products/" + param.id);
   const data: Product = await res.json();
-
+  console.log("i am in server");
   return (
     <div>
+      <Test />
       {data.title}
       <div>{data.description}</div>
+      <ButtonForProduct>
+        <Test />
+      </ButtonForProduct>
     </div>
   );
 }
