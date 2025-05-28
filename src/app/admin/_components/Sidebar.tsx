@@ -1,3 +1,5 @@
+"use client";
+import { logout } from "@/server-actions/auth-actions";
 import Link from "next/link";
 import React from "react";
 
@@ -7,6 +9,12 @@ function Sidebar() {
       <Link href={"/admin"}>Dashboard</Link>
       <Link href={"/admin/user"}>Users</Link>
       <Link href={"/admin/product"}>Product</Link>
+      <button
+        onClick={async () => await logout()}
+        className="mt-auto mb-10 cursor-pointer hover:underline"
+      >
+        Logout
+      </button>
     </div>
   );
 }
