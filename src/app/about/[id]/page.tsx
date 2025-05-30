@@ -1,7 +1,6 @@
 import React from "react";
 
-async function page({ params }: { params: Promise<{ id: string }> }) {
-  const paramData = await params;
+async function page() {
   const res = await fetch("https://fakestoreapi.com/products");
   const data: { title: string }[] = await res.json();
   await new Promise((resolve) => {
